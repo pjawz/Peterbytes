@@ -6,8 +6,8 @@ Peterbytes.com is my current project featuring a full resume section for potenti
 
 
 --==Requirements==--
-
--Resume homepage featuring fullscreen javascript design animations. 
+-Hero Image section as main landing page
+-Resume homepage featuring dynamic javascript design animations. 
    	-circular skill level display graphics 
 	 	-education 
 	 	-Job Experience 
