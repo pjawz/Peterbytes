@@ -1,7 +1,7 @@
 {
-  "name": "EvoBank",
+  "name": "PeterBytes",
   "version": "1.0.0",
-  "description": "MIS3530 Final Project",
+  "description": "Peterbytes.com Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
