@@ -1,0 +1,26 @@
+{
+  "name": "Evobank",
+  "version": "1.0.0",
+  "description": "MIS 3530 Final Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(git://github.com/pgjoslyn/Peterbytes.git)"
+  },
+  "keywords": [
+    "PeterBytes",
+    "Webpage"
+  ],
+  "author": "Peter Joslyn",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "sass": "^0.5.0"
+  }
+}
