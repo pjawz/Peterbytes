@@ -1,0 +1,1 @@
+$(window).on("load",function(){function n(){var n="https://api.coinmarketcap.com/v1/ticker/?limit=10&convert=USD";fetch(n).then(function(n){return n.json()}).then(function(n){t=parseJSON(n),o(t)})}function o(n){for(var o=n,t=0;t<o.length;t++)$(".coinDropdown").append("<option>"+o[t].name+"</option>")}var t;n()});

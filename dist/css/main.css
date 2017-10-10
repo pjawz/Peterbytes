@@ -113,7 +113,8 @@ textarea {
 #logo {
     font-family: 'Arial Narrow Bold', sans-serif;
     color: white;
-    text-decoration: double;
+    -webkit-text-decoration: double;
+            text-decoration: double;
 }
 
 #body {
@@ -138,12 +139,18 @@ textarea {
 #coinTable {
     
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
 }
 .coin {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     border: 1px solid black;
     background-color: rgb(221, 221, 221);
     min-height: 300px; 
@@ -275,7 +282,8 @@ textarea {
         color: #000 !important;
         /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+                box-shadow: none !important;
         text-shadow: none !important;
     }
     a,
@@ -326,3 +334,5 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+/*# sourceMappingURL=main.css.map */

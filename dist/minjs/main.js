@@ -1,0 +1,1 @@
+function buildTable(e){for(var t=(document.getElementById("coinTable"),document.createElement("h4"),document.createElement("p"),0);t<e[t].length;t++);}
