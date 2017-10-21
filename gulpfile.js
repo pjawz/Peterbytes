@@ -62,7 +62,6 @@ gulp.task('sass:watch', function () {
 // minifies and compiles JS and sends to the dist/ folder.
 gulp.task('js', function () {
         gulp.src('js/*js')
-        .pipe(uglify())
         .pipe(gulp.dest('dist/minjs'));
         reload();
      

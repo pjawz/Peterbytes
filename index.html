@@ -12,8 +12,8 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/normalize.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/main.css">
 </head>
 
 <body>
@@ -40,25 +40,29 @@
                     <div class="col-5">
                         <div class="input-group">
                             <div class=" input-group-addon">$</div>
-                            <input type="text" id='priceIn' class='form-control' placeholder="Price In">
-                            <select name="coinIn" id="priceInDropdown" class="coinDropdown"></select>
+                            <input type="number" id='priceIn' class='form-control' placeholder="Price In" onkeyup="priceConverter()">
+                            <br>
+                            <select name="coinIn" id="priceInDropdown" class="coinDropdown" onchange="priceConverter()"></select>
                         </div>
                         <div class="row">
                             <div class="col-8 m-auto">
-                                <button type="submit" class='form-control btn btn-primary'>Fetch Data</button>
+                                <button type="submit" onclick='priceConverter()'class='form-control btn btn-primary'>Fetch Data</button>
                             </div>
                         </div>
                     </div>
                     <!-- Price Out -->
+                    <div class="col-2">
+                        <button onclick="switchCoinsSelected()"> Switch</button>
+                    </div>
                     <div class="col-5 ">
                         <div class="input-group">
                             <div class=" input-group-addon">$</div>
-                            <input type="text" id='priceOut' class=' form-control' placeholder="Price Out">
-                            <select name="coinIn" id='priceOutDropdown' class="coinDropdown">Select a Coin</select>
+                            <input type="number" id='priceOut' class=' form-control' placeholder="Price Out" onkeyup="priceConverter()">
+                            <select name="coinIn" id='priceOutDropdown' class="coinDropdown" onchange="priceConverter()">Select a Coin</select>
                         </div>
                         <div class="row">
                             <div class="col-8 m-auto">
-                                <button type="submit" class='form-control btn btn-primary'>Fetch Data</button>
+                                <button type="submit" onclick='priceConverter()' class='form-control btn btn-primary'>Fetch Data</button>
                             </div>
                         </div>
                     </div>
@@ -77,16 +81,6 @@
                     </div>
                     <div class="col-10 m-auto">
                         <div id='coinTable' class="row">
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
-                            <div class="col-2 coin"></div>
                         </div>
                     </div>
                 </div>
@@ -108,9 +102,9 @@
         window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
 
     </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="http://localhost:3000/js/plugins.js"></script>
+    <script src="http://localhost:3000/js/main.js"></script>
+    <script src="http://localhost:3000/js/ajax.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <!-- <script>

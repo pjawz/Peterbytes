@@ -66,8 +66,19 @@ function priceConverter() {
     var coinIn = byId('priceInDropdown').value;
     var priceOut = byId('priceOut').value;
     var coinOut = byId('priceOutDropdown').value;
+    var coinInToUse = coin[coinIn] || usd
+    var coinOutToUse = coin[coinOut] || usd
 
-    var coinInPriceConverted = ((coin[coinIn].price_usd || usd.price_usd) * priceIn) / (coin[coinOut].price_usd || usd.price_usd)
+    var coinInPriceConverted = coinInToUse.price_usd * priceIn / coinOutToUse.price_usd
 
     byId('priceOut').value = coinInPriceConverted.toFixed(6)
+}
+
+function switchCoinsSelected() {
+    var coinIn = byId('priceInDropdown').value
+    var coinOut = byId('priceOutDropdown').value
+
+    byId('priceInDropdown').value = coinOut
+    byId('priceOutDropdown').value = coinIn
+    priceConverter()
 }
